@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
 
     public Camera fpsCam;
 
+    //controleerd of je op de muis klikt
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,6 +19,7 @@ public class Gun : MonoBehaviour
         }
     }
 
+    //schiet en controleerd of je een target raakt
     void shoot()
     {
         RaycastHit hit;

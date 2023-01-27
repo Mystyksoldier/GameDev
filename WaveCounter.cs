@@ -9,6 +9,7 @@ public class WaveCounter : MonoBehaviour
     public Text waveCounterText;
     private int waveNumber = 0;
 
+    //telt de waves voor de waveCounter en controleert of je 10 waves hebt gehaald en dan naar de GameWon scene gaat
     public void UpdateWaveNumber()
     {
         waveNumber++;

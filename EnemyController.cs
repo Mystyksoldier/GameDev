@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     private UnityEngine.AI.NavMeshAgent Enemy;
 
 
+    //laat de enemy naar de speler lopen
     void Start()
     {
         Enemy = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -17,6 +18,7 @@ public class EnemyController : MonoBehaviour
         Enemy.speed = speed;
     }
 
+    //update de positie van de player
     void Update()
     {
         Enemy.SetDestination(Player.transform.position);

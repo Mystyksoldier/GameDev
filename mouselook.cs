@@ -11,12 +11,13 @@ public class mouselook : MonoBehaviour
 
     float xRotation = 0f;
 
+    //maakt de muis onzichtbaar
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    
+    //laat de speler rond kijken door met de muis te bewegen
     void Update()
     {
         

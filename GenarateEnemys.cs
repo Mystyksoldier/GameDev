@@ -12,12 +12,14 @@ public class GenarateEnemys : MonoBehaviour
     private int waveNumber = 0;
     private int enemyCount;
 
+    //start de waves
     void Start()
     {
         enemyCount = startingEnemyCount;
         SpawnWave();
     }
 
+    //controleerd of er nog enemies zijn
     void Update()
     {
         if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
@@ -26,6 +28,7 @@ public class GenarateEnemys : MonoBehaviour
         }
     }
 
+    //spawn de enemies en voegt +2 enemies toe per wave
     void SpawnWave()
     {
         for (int i = 0; i < enemyCount; i++)
