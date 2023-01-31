@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
 
     public float damage = 10f;
     public float range = 100f;
+    public AudioSource EnemyDeathSound;
+    public AudioSource GunSound;
 
     public Camera fpsCam;
 
@@ -16,6 +18,7 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             shoot();
+            GunSound.Play();
         }
     }
 
@@ -33,5 +36,11 @@ public class Gun : MonoBehaviour
                 target.TakeDamage(damage);
             }
         }
+    }
+
+    //speelt geluid af als je een target dood schiet
+    public void DieSound()
+    {
+        EnemyDeathSound.Play();
     }
 }
